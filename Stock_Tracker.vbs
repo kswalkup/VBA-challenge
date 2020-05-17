@@ -51,6 +51,7 @@ ws.Activate
     YearlyChange = ws.Cells(i, 6) - ws.Cells(start, 3)
 
 ' Calculate TotalPercentage
+    On Error Resume Next
     TotalPercentage = (ws.Cells(i, 6) / ws.Cells(start, 3) - 1)
     
     GreatPerc = Application.WorksheetFunction.max(Range("K:K"))
